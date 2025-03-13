@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-xl font-bold">My Portfolio</h1>
+        </div>
+    </nav>
+
+    <header class="text-center py-20 bg-blue-500 text-white">
+        <img src="C:\Users\gomat\OneDrive\Pictures\Screenshots 1\Screenshot (10).png" alt="Portfolio Image" class="mx-auto rounded-full w-32 h-32">
+        <h2 class="text-2xl font-semibold mt-4">Hi, I'm Hemakumar</h2>
+        <p class="text-lg">A Passionate Web Developer & Data Enthusiast</p>
+    </header>
+
+    <section class="py-16 container mx-auto px-6">
+        <div class="flex justify-around text-center">
+            <a href="#about" class="text-xl font-semibold hover:text-blue-500">About</a>
+            <a href="#projects" class="text-xl font-semibold hover:text-blue-500">Projects</a>
+            <a href="#skills" class="text-xl font-semibold hover:text-blue-500">Skills</a>
+            <a href="#contact" class="text-xl font-semibold hover:text-blue-500">Contact</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 container mx-auto px-6 hidden">
+        <h3 class="text-3xl font-semibold">About Me</h3>
+        <p class="mt-4 text-lg">Qualities of a Good Web Developer:</p>
+        <ul class="list-disc pl-6 mt-2">
+            <li>Strong understanding of HTML, CSS, and JavaScript</li>
+            <li>Ability to write clean and efficient code</li>
+            <li>Responsive design and mobile-first development</li>
+            <li>Good problem-solving and debugging skills</li>
+            <li>Continuous learning and adaptability to new technologies</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="py-16 bg-gray-200 hidden">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-semibold">Projects</h3>
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <div class="bg-white p-4 shadow-md rounded-lg">
+                    <h4 class="text-xl font-semibold">Tic Tac Toe</h4>
+                    <p>A simple Tic Tac Toe game with an interactive UI and responsive design.</p>
+                </div>
+                <div class="bg-white p-4 shadow-md rounded-lg">
+                    <h4 class="text-xl font-semibold">Stop Watch</h4>
+                    <p>A functional stopwatch application with start, stop, and reset features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 container mx-auto px-6 hidden">
+        <h3 class="text-3xl font-semibold">Skills</h3>
+        <ul class="list-disc pl-6 mt-4">
+            <li>HTML, CSS, JavaScript, React</li>
+            <li>Python & Data Analysis</li>
+            <li>Database Management (SQL, MongoDB)</li>
+            <li>Version Control (Git & GitHub)</li>
+            <li>Responsive Web Design</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="py-16 container mx-auto px-6 hidden">
+        <h3 class="text-3xl font-semibold">Contact Me</h3>
+        <p class="mt-4 text-lg">Email: <a href="mailto:hemakumarh1115@gmail.com" class="text-blue-500">hemakumarh1115@gmail.com</a></p>
+        <p class="mt-2 text-lg">LinkedIn: <a href="https://www.linkedin.com/in/hemakumar-h-1ab51231b/" class="text-blue-500">Hemakumar H</a></p>
+        <p class="mt-2 text-lg">GitHub: <a href="https://github.com/hemakumar15" class="text-blue-500">hemakumar15</a></p>
+    </section>
+
+    <footer class="text-center py-6 bg-gray-800 text-white">
+        &copy; 2025 Hemakumar H. All Rights Reserved.
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('section').forEach(section => section.classList.add('hidden'));
+                document.querySelector(this.getAttribute('href')).classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
